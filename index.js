@@ -3,6 +3,7 @@ const cors = require("cors");
 const { MongoClient, ServerApiVersion } = require("mongodb");
 const dotenv = require("dotenv").config();
 const app = express();
+const PORT=process.env.PORT||4000
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -80,7 +81,7 @@ async function run() {
        
      });
 
-    app.listen(process.env.PORT, () => {
+    app.listen(PORT, () => {
       console.log(`the server is connecting ${process.env.PORT}`);
     });
   } finally {
