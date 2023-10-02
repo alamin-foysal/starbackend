@@ -7,11 +7,12 @@ const PORT=process.env.PORT||4000
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(
-  cors({
-    origin: "http://localhost:5173",
-  })
-);
+app.use(cors())
+// app.use(
+//   cors({
+//     origin: "http://localhost:5173",
+//   })
+// );
 
 const uri = process.env.URI;
 const client = new MongoClient(uri, {
@@ -60,7 +61,7 @@ async function run() {
     });
 
     //ALL products management
-    app.get("/api/all-product", async(req, res) => {
+    app.get(" ", async(req, res) => {
       const result=await top_products.find().toArray();
       res.send(result);
     });
@@ -91,3 +92,4 @@ run().catch(console.dir);
 
 
 
+     
