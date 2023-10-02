@@ -10,7 +10,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(
   cors({
-    origin: "*",
+    origin: "https://all-in-super-shop.netlify.app ",
   })
 );
 
