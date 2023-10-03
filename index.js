@@ -8,8 +8,6 @@ const PORT=process.env.PORT||4000
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname,'./add/dist')))
-
 app.use(cors)
 
 // app.use(
@@ -31,12 +29,7 @@ async function run() {
   try {
     await client.connect();
     console.log("the database is connecting");
-
-    app.get('*',async(req,res)=>{
-      res.sendFile(path.join(__dirname,'./add/dist/index.html'))
-
-    })
-
+    
     // Data-base Management start
 
     const db=client.db("ADDA_RESTURENT");
