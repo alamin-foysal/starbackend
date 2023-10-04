@@ -1,9 +1,9 @@
-// const express = require("express");
-// const cors = require("cors");
-// const { MongoClient, ServerApiVersion } = require("mongodb");
-// const dotenv = require("dotenv").config();
-// const app = express();
-// const path=require('path')
+const express = require("express");
+const cors = require("cors");
+const { MongoClient, ServerApiVersion } = require("mongodb");
+const dotenv = require("dotenv").config();
+const app = express();
+const path=require('path')
 const PORT=process.env.PORT||4000
 
 app.use(express.json());
