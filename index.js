@@ -64,7 +64,7 @@ async function run() {
     });
 
     //ALL products management
-    app.get(" ", async(req, res) => {
+    app.get("/api/all-product", async(req, res) => {
       const result=await top_products.find().toArray();
       res.send(result);
     });
